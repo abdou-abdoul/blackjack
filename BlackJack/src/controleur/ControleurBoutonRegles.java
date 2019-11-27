@@ -1,0 +1,33 @@
+package controleur;
+
+import java.awt.event.*;
+
+import vue.*;
+
+public class ControleurBoutonRegles extends ControleurBouton {
+    private static final long serialVersionUID = 13L;
+    protected BlackJackGui vue;
+
+    /**
+     * Constructeur logique
+     * @param x : position x du bouton
+     * @param y : position y du bouton
+     * @param width : largeur du bouton
+     * @param height : longueur du bouton
+     * @param vue : acces a la vue
+     */
+    public ControleurBoutonRegles(int x, int y, int width, int height, BlackJackGui vue) {
+        super();
+    	this.vue = vue;
+        setBounds(x, y, width, height);
+    }
+
+    /**
+     * actionPerformed : affiche les regles dans la vue
+     */
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    	System.out.println("Regles");
+        vue.afficherRegles();
+    }
+}
